@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp2.2</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="AElf.Contracts.Genesis" Version="0.7.0-alpha.1" />
+      <PackageReference Include="AElf.CrossChain.Grpc" Version="0.7.0-alpha.1" />
+      <PackageReference Include="AElf.Kernel.Consensus.DPoS" Version="0.7.0-alpha.1" />
+      <PackageReference Include="AElf.OS" Version="0.7.0-alpha.1" />
+      <PackageReference Include="AElf.OS.Rpc.ChainController" Version="0.7.0-alpha.1" />
+      <PackageReference Include="AElf.OS.Rpc.Net" Version="0.7.0-alpha.1" />
+      <PackageReference Include="AElf.OS.Rpc.Wallet" Version="0.7.0-alpha.1" />
+      <PackageReference Include="AElf.Runtime.CSharp" Version="0.7.0-alpha.1" />
+      <PackageReference Include="AElf.Runtime.CSharp.Core" Version="0.7.0-alpha.1" />
+      <PackageReference Include="AElf.Runtime.CSharp.ExecutiveTokenPlugin" Version="0.7.0-alpha.1" />
+      <PackageReference Include="AElf.RuntimeSetup" Version="0.7.0-alpha.1" />
+      <PackageReference Include="AElf.Sdk.CSharp" Version="0.7.0-alpha.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Demo.Contracts.Consensus.DPoS\Demo.Contracts.Consensus.DPoS.csproj" />
+      <ProjectReference Include="..\Demo.Contracts.MultiToken\Demo.Contracts.MultiToken.csproj" />
+      <ProjectReference Include="..\DemoContracts.Dividend\Demo.Contracts.Dividend.csproj" />
+    </ItemGroup>
+</Project>

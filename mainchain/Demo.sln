@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Blockchains.MainChain", "Demo.Blockchains.MainChain\Demo.Blockchains.MainChain.csproj", "{12356D93-003D-42B0-A140-05C5A14DFA33}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Contracts.Consensus.DPoS", "Demo.Contracts.Consensus.DPoS\Demo.Contracts.Consensus.DPoS.csproj", "{99C3F435-8DD8-4F04-8654-8D1489CA931E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Contracts.MultiToken", "Demo.Contracts.MultiToken\Demo.Contracts.MultiToken.csproj", "{27239561-1BAF-4924-8008-24C56B7E124C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Launcher", "Demo.Launcher\Demo.Launcher.csproj", "{2BCA5687-91B8-4B0C-8C88-7B4057A2E26A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Contracts.Dividend", "DemoContracts.Dividend\Demo.Contracts.Dividend.csproj", "{80A7E83F-FC35-47BB-AB87-E0C609CAB3B2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{12356D93-003D-42B0-A140-05C5A14DFA33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12356D93-003D-42B0-A140-05C5A14DFA33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12356D93-003D-42B0-A140-05C5A14DFA33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12356D93-003D-42B0-A140-05C5A14DFA33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99C3F435-8DD8-4F04-8654-8D1489CA931E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99C3F435-8DD8-4F04-8654-8D1489CA931E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99C3F435-8DD8-4F04-8654-8D1489CA931E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99C3F435-8DD8-4F04-8654-8D1489CA931E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27239561-1BAF-4924-8008-24C56B7E124C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27239561-1BAF-4924-8008-24C56B7E124C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27239561-1BAF-4924-8008-24C56B7E124C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27239561-1BAF-4924-8008-24C56B7E124C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BCA5687-91B8-4B0C-8C88-7B4057A2E26A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BCA5687-91B8-4B0C-8C88-7B4057A2E26A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BCA5687-91B8-4B0C-8C88-7B4057A2E26A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BCA5687-91B8-4B0C-8C88-7B4057A2E26A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80A7E83F-FC35-47BB-AB87-E0C609CAB3B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80A7E83F-FC35-47BB-AB87-E0C609CAB3B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80A7E83F-FC35-47BB-AB87-E0C609CAB3B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80A7E83F-FC35-47BB-AB87-E0C609CAB3B2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
