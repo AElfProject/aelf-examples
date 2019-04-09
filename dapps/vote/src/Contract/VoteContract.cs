@@ -9,6 +9,7 @@ namespace Contract
     {
         public override Empty Initialize(InitializeInput input)
         {
+            Assert(State.ChairPerson.Value == null, "Already intialized.");
             State.ChairPerson.Value = Context.Sender;
             State.Voters[Context.Sender] = new Voter()
             {
