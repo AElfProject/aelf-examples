@@ -1,0 +1,48 @@
+syntax = "proto3";
+
+package vote;
+
+import "aelf_options.proto";
+import "common.proto";
+import "google/protobuf/empty.proto";
+import "google/protobuf/wrappers.proto";
+
+option csharp_namespace = "Contract";
+
+service VoteContract {
+    option (aelf.csharp_state) = "Contract.VoteState";
+    // Actions
+    rpc Initialize (InitializeInput) returns (google.protobuf.Empty) {
+    }
+    rpc GiveRightToVote(Address) returns (google.protobuf.Empty) {
+    }
+    rpc Delegate(Address) returns (google.protobuf.Empty) {
+    }
+    rpc Vote(google.protobuf.UInt32Value) returns (google.protobuf.Empty) {
+    }
+    // Views
+    // Solidity - Original
+    rpc GetWinningProposal(google.protobuf.Empty) returns(Proposal){
+        option (aelf.is_view) = true;
+    }
+    // Added by us
+    rpc GetChainperson(google.protobuf.Empty) returns(Address){
+        option (aelf.is_view) = true;
+    }
+}
+
+message InitializeInput {
+    repeated string proposalNames = 1;
+}
+
+message Voter {
+    uint32 weight = 1;
+    bool voted = 2;
+    Address delegate = 3;
+    uint32 vote = 4;
+}
+
+message Proposal {
+    string name = 1;
+    uint32 vote_count = 2;
+}
