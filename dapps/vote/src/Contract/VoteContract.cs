@@ -101,7 +101,7 @@ namespace Contract
             return winningProposal;
         }
 
-        public override Address GetChainperson(Empty input)
+        public override Address GetChainPerson(Empty input)
         {
             return State.ChairPerson.Value;
         }

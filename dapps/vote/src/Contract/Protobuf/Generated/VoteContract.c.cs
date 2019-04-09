@@ -59,10 +59,10 @@ namespace Contract {
         __Marshaller_google_protobuf_Empty,
         __Marshaller_vote_Proposal);
 
-    static readonly aelf::Method<global::Google.Protobuf.WellKnownTypes.Empty, global::AElf.Common.Address> __Method_GetChainperson = new aelf::Method<global::Google.Protobuf.WellKnownTypes.Empty, global::AElf.Common.Address>(
+    static readonly aelf::Method<global::Google.Protobuf.WellKnownTypes.Empty, global::AElf.Common.Address> __Method_GetChainPerson = new aelf::Method<global::Google.Protobuf.WellKnownTypes.Empty, global::AElf.Common.Address>(
         aelf::MethodType.View,
         __ServiceName,
-        "GetChainperson",
+        "GetChainPerson",
         __Marshaller_google_protobuf_Empty,
         __Marshaller_Address);
 
@@ -114,7 +114,7 @@ namespace Contract {
         throw new global::System.NotImplementedException();
       }
 
-      public virtual global::AElf.Common.Address GetChainperson(global::Google.Protobuf.WellKnownTypes.Empty input)
+      public virtual global::AElf.Common.Address GetChainPerson(global::Google.Protobuf.WellKnownTypes.Empty input)
       {
         throw new global::System.NotImplementedException();
       }
@@ -130,7 +130,7 @@ namespace Contract {
           .AddMethod(__Method_Delegate, serviceImpl.Delegate)
           .AddMethod(__Method_Vote, serviceImpl.Vote)
           .AddMethod(__Method_GetWinningProposal, serviceImpl.GetWinningProposal)
-          .AddMethod(__Method_GetChainperson, serviceImpl.GetChainperson).Build();
+          .AddMethod(__Method_GetChainPerson, serviceImpl.GetChainPerson).Build();
     }
 
   }

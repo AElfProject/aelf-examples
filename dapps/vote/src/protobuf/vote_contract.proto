@@ -26,13 +26,13 @@ service VoteContract {
         option (aelf.is_view) = true;
     }
     // Added by us
-    rpc GetChainperson(google.protobuf.Empty) returns(Address){
+    rpc GetChainPerson(google.protobuf.Empty) returns(Address){
         option (aelf.is_view) = true;
     }
 }
 
 message InitializeInput {
-    repeated string proposalNames = 1;
+    repeated string proposal_names = 1;
 }
 
 message Voter {

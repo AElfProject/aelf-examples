@@ -26,20 +26,20 @@ namespace Contract {
           string.Concat(
             "ChN2b3RlX2NvbnRyYWN0LnByb3RvEgR2b3RlGhJhZWxmX29wdGlvbnMucHJv",
             "dG8aDGNvbW1vbi5wcm90bxobZ29vZ2xlL3Byb3RvYnVmL2VtcHR5LnByb3Rv",
-            "Gh5nb29nbGUvcHJvdG9idWYvd3JhcHBlcnMucHJvdG8iKAoPSW5pdGlhbGl6",
-            "ZUlucHV0EhUKDXByb3Bvc2FsTmFtZXMYASADKAkiUAoFVm90ZXISDgoGd2Vp",
-            "Z2h0GAEgASgNEg0KBXZvdGVkGAIgASgIEhoKCGRlbGVnYXRlGAMgASgLMggu",
-            "QWRkcmVzcxIMCgR2b3RlGAQgASgNIiwKCFByb3Bvc2FsEgwKBG5hbWUYASAB",
-            "KAkSEgoKdm90ZV9jb3VudBgCIAEoDTKNAwoMVm90ZUNvbnRyYWN0Ej0KCklu",
-            "aXRpYWxpemUSFS52b3RlLkluaXRpYWxpemVJbnB1dBoWLmdvb2dsZS5wcm90",
-            "b2J1Zi5FbXB0eSIAEjUKD0dpdmVSaWdodFRvVm90ZRIILkFkZHJlc3MaFi5n",
-            "b29nbGUucHJvdG9idWYuRW1wdHkiABIuCghEZWxlZ2F0ZRIILkFkZHJlc3Ma",
-            "Fi5nb29nbGUucHJvdG9idWYuRW1wdHkiABI+CgRWb3RlEhwuZ29vZ2xlLnBy",
-            "b3RvYnVmLlVJbnQzMlZhbHVlGhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IgAS",
-            "QwoSR2V0V2lubmluZ1Byb3Bvc2FsEhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5",
-            "Gg4udm90ZS5Qcm9wb3NhbCIFiIn3AQESOQoOR2V0Q2hhaW5wZXJzb24SFi5n",
-            "b29nbGUucHJvdG9idWYuRW1wdHkaCC5BZGRyZXNzIgWIifcBARoXssz2ARJD",
-            "b250cmFjdC5Wb3RlU3RhdGVCC6oCCENvbnRyYWN0YgZwcm90bzM="));
+            "Gh5nb29nbGUvcHJvdG9idWYvd3JhcHBlcnMucHJvdG8iKQoPSW5pdGlhbGl6",
+            "ZUlucHV0EhYKDnByb3Bvc2FsX25hbWVzGAEgAygJIlAKBVZvdGVyEg4KBndl",
+            "aWdodBgBIAEoDRINCgV2b3RlZBgCIAEoCBIaCghkZWxlZ2F0ZRgDIAEoCzII",
+            "LkFkZHJlc3MSDAoEdm90ZRgEIAEoDSIsCghQcm9wb3NhbBIMCgRuYW1lGAEg",
+            "ASgJEhIKCnZvdGVfY291bnQYAiABKA0yjQMKDFZvdGVDb250cmFjdBI9CgpJ",
+            "bml0aWFsaXplEhUudm90ZS5Jbml0aWFsaXplSW5wdXQaFi5nb29nbGUucHJv",
+            "dG9idWYuRW1wdHkiABI1Cg9HaXZlUmlnaHRUb1ZvdGUSCC5BZGRyZXNzGhYu",
+            "Z29vZ2xlLnByb3RvYnVmLkVtcHR5IgASLgoIRGVsZWdhdGUSCC5BZGRyZXNz",
+            "GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IgASPgoEVm90ZRIcLmdvb2dsZS5w",
+            "cm90b2J1Zi5VSW50MzJWYWx1ZRoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIA",
+            "EkMKEkdldFdpbm5pbmdQcm9wb3NhbBIWLmdvb2dsZS5wcm90b2J1Zi5FbXB0",
+            "eRoOLnZvdGUuUHJvcG9zYWwiBYiJ9wEBEjkKDkdldENoYWluUGVyc29uEhYu",
+            "Z29vZ2xlLnByb3RvYnVmLkVtcHR5GgguQWRkcmVzcyIFiIn3AQEaF7LM9gES",
+            "Q29udHJhY3QuVm90ZVN0YXRlQguqAghDb250cmFjdGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Aelf.AelfOptionsReflection.Descriptor, global::AElf.Common.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -86,7 +86,7 @@ namespace Contract {
       return new InitializeInput(this);
     }
 
-    /// <summary>Field number for the "proposalNames" field.</summary>
+    /// <summary>Field number for the "proposal_names" field.</summary>
     public const int ProposalNamesFieldNumber = 1;
     private static readonly pb::FieldCodec<string> _repeated_proposalNames_codec
         = pb::FieldCodec.ForString(10);
