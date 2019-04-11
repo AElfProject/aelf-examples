@@ -30,22 +30,26 @@ namespace Ballot {
             "dBIWCg5wcm9wb3NhbF9uYW1lcxgBIAMoCSJQCgVWb3RlchIOCgZ3ZWlnaHQY",
             "ASABKA0SDQoFdm90ZWQYAiABKAgSGgoIZGVsZWdhdGUYAyABKAsyCC5BZGRy",
             "ZXNzEgwKBHZvdGUYBCABKA0iLAoIUHJvcG9zYWwSDAoEbmFtZRgBIAEoCRIS",
-            "Cgp2b3RlX2NvdW50GAIgASgNMoQDCgZCYWxsb3QSPwoKSW5pdGlhbGl6ZRIX",
-            "LmJhbGxvdC5Jbml0aWFsaXplSW5wdXQaFi5nb29nbGUucHJvdG9idWYuRW1w",
-            "dHkiABI1Cg9HaXZlUmlnaHRUb1ZvdGUSCC5BZGRyZXNzGhYuZ29vZ2xlLnBy",
-            "b3RvYnVmLkVtcHR5IgASLgoIRGVsZWdhdGUSCC5BZGRyZXNzGhYuZ29vZ2xl",
-            "LnByb3RvYnVmLkVtcHR5IgASPgoEVm90ZRIcLmdvb2dsZS5wcm90b2J1Zi5V",
-            "SW50MzJWYWx1ZRoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIAEkUKEkdldFdp",
-            "bm5pbmdQcm9wb3NhbBIWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eRoQLmJhbGxv",
-            "dC5Qcm9wb3NhbCIFiIn3AQESOQoOR2V0Q2hhaW5QZXJzb24SFi5nb29nbGUu",
-            "cHJvdG9idWYuRW1wdHkaCC5BZGRyZXNzIgWIifcBARoQssz2AQtCYWxsb3RT",
-            "dGF0ZUIJqgIGQmFsbG90YgZwcm90bzM="));
+            "Cgp2b3RlX2NvdW50GAIgASgNIjQKDVByb3Bvc2Fsc0RhdGESIwoJcHJvcG9z",
+            "YWxzGAEgAygLMhAuYmFsbG90LlByb3Bvc2FsMsoDCgZCYWxsb3QSPwoKSW5p",
+            "dGlhbGl6ZRIXLmJhbGxvdC5Jbml0aWFsaXplSW5wdXQaFi5nb29nbGUucHJv",
+            "dG9idWYuRW1wdHkiABI1Cg9HaXZlUmlnaHRUb1ZvdGUSCC5BZGRyZXNzGhYu",
+            "Z29vZ2xlLnByb3RvYnVmLkVtcHR5IgASLgoIRGVsZWdhdGUSCC5BZGRyZXNz",
+            "GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IgASPgoEVm90ZRIcLmdvb2dsZS5w",
+            "cm90b2J1Zi5VSW50MzJWYWx1ZRoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIA",
+            "EkUKEkdldFdpbm5pbmdQcm9wb3NhbBIWLmdvb2dsZS5wcm90b2J1Zi5FbXB0",
+            "eRoQLmJhbGxvdC5Qcm9wb3NhbCIFiIn3AQESOQoOR2V0Q2hhaW5QZXJzb24S",
+            "Fi5nb29nbGUucHJvdG9idWYuRW1wdHkaCC5BZGRyZXNzIgWIifcBARJECgxH",
+            "ZXRQcm9wb3NhbHMSFi5nb29nbGUucHJvdG9idWYuRW1wdHkaFS5iYWxsb3Qu",
+            "UHJvcG9zYWxzRGF0YSIFiIn3AQEaELLM9gELQmFsbG90U3RhdGVCCaoCBkJh",
+            "bGxvdGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Aelf.AelfOptionsReflection.Descriptor, global::AElf.Common.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ballot.InitializeInput), global::Ballot.InitializeInput.Parser, new[]{ "ProposalNames" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ballot.Voter), global::Ballot.Voter.Parser, new[]{ "Weight", "Voted", "Delegate", "Vote" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ballot.Proposal), global::Ballot.Proposal.Parser, new[]{ "Name", "VoteCount" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ballot.Proposal), global::Ballot.Proposal.Parser, new[]{ "Name", "VoteCount" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ballot.ProposalsData), global::Ballot.ProposalsData.Parser, new[]{ "Proposals" }, null, null, null)
           }));
     }
     #endregion
@@ -541,6 +545,127 @@ namespace Ballot {
           }
           case 16: {
             VoteCount = input.ReadUInt32();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class ProposalsData : pb::IMessage<ProposalsData> {
+    private static readonly pb::MessageParser<ProposalsData> _parser = new pb::MessageParser<ProposalsData>(() => new ProposalsData());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ProposalsData> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ballot.BallotReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProposalsData() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProposalsData(ProposalsData other) : this() {
+      proposals_ = other.proposals_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProposalsData Clone() {
+      return new ProposalsData(this);
+    }
+
+    /// <summary>Field number for the "proposals" field.</summary>
+    public const int ProposalsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Ballot.Proposal> _repeated_proposals_codec
+        = pb::FieldCodec.ForMessage(10, global::Ballot.Proposal.Parser);
+    private readonly pbc::RepeatedField<global::Ballot.Proposal> proposals_ = new pbc::RepeatedField<global::Ballot.Proposal>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Ballot.Proposal> Proposals {
+      get { return proposals_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ProposalsData);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ProposalsData other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!proposals_.Equals(other.proposals_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= proposals_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      proposals_.WriteTo(output, _repeated_proposals_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += proposals_.CalculateSize(_repeated_proposals_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ProposalsData other) {
+      if (other == null) {
+        return;
+      }
+      proposals_.Add(other.proposals_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            proposals_.AddEntriesFrom(input, _repeated_proposals_codec);
             break;
           }
         }

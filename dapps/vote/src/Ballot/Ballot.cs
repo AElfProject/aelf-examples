@@ -107,5 +107,17 @@ namespace Ballot
         {
             return State.ChairPerson.Value;
         }
+
+        public override ProposalsData GetProposals(Empty input)
+        {
+            var output = new ProposalsData();
+            for (uint i = 0; i < State.ProposalCount.Value; i++)
+            {
+                var p = State.Proposals[i];
+                output.Proposals.Add(p);
+            }
+
+            return output;
+        }
     }
 }

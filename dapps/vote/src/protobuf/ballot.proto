@@ -14,19 +14,22 @@ service Ballot {
     // Actions
     rpc Initialize (InitializeInput) returns (google.protobuf.Empty) {
     }
-    rpc GiveRightToVote(Address) returns (google.protobuf.Empty) {
+    rpc GiveRightToVote (Address) returns (google.protobuf.Empty) {
     }
-    rpc Delegate(Address) returns (google.protobuf.Empty) {
+    rpc Delegate (Address) returns (google.protobuf.Empty) {
     }
-    rpc Vote(google.protobuf.UInt32Value) returns (google.protobuf.Empty) {
+    rpc Vote (google.protobuf.UInt32Value) returns (google.protobuf.Empty) {
     }
     // Views
     // Solidity - Original
-    rpc GetWinningProposal(google.protobuf.Empty) returns(Proposal){
+    rpc GetWinningProposal (google.protobuf.Empty) returns (Proposal) {
         option (aelf.is_view) = true;
     }
     // Added by us
-    rpc GetChainPerson(google.protobuf.Empty) returns(Address){
+    rpc GetChainPerson (google.protobuf.Empty) returns (Address) {
+        option (aelf.is_view) = true;
+    }
+    rpc GetProposals (google.protobuf.Empty) returns (ProposalsData) {
         option (aelf.is_view) = true;
     }
 }
@@ -45,4 +48,8 @@ message Voter {
 message Proposal {
     string name = 1;
     uint32 vote_count = 2;
+}
+
+message ProposalsData {
+    repeated Proposal proposals = 1;
 }

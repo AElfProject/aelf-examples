@@ -21,6 +21,7 @@ namespace Ballot {
     static readonly aelf::Marshaller<global::AElf.Common.Address> __Marshaller_Address = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::AElf.Common.Address.Parser.ParseFrom);
     static readonly aelf::Marshaller<global::Google.Protobuf.WellKnownTypes.UInt32Value> __Marshaller_google_protobuf_UInt32Value = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.UInt32Value.Parser.ParseFrom);
     static readonly aelf::Marshaller<global::Ballot.Proposal> __Marshaller_ballot_Proposal = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Ballot.Proposal.Parser.ParseFrom);
+    static readonly aelf::Marshaller<global::Ballot.ProposalsData> __Marshaller_ballot_ProposalsData = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Ballot.ProposalsData.Parser.ParseFrom);
     #endregion
 
     #region Methods
@@ -65,6 +66,13 @@ namespace Ballot {
         "GetChainPerson",
         __Marshaller_google_protobuf_Empty,
         __Marshaller_Address);
+
+    static readonly aelf::Method<global::Google.Protobuf.WellKnownTypes.Empty, global::Ballot.ProposalsData> __Method_GetProposals = new aelf::Method<global::Google.Protobuf.WellKnownTypes.Empty, global::Ballot.ProposalsData>(
+        aelf::MethodType.View,
+        __ServiceName,
+        "GetProposals",
+        __Marshaller_google_protobuf_Empty,
+        __Marshaller_ballot_ProposalsData);
 
     #endregion
 
@@ -119,6 +127,11 @@ namespace Ballot {
         throw new global::System.NotImplementedException();
       }
 
+      public virtual global::Ballot.ProposalsData GetProposals(global::Google.Protobuf.WellKnownTypes.Empty input)
+      {
+        throw new global::System.NotImplementedException();
+      }
+
     }
 
     public static aelf::ServerServiceDefinition BindService(BallotBase serviceImpl)
@@ -130,7 +143,8 @@ namespace Ballot {
           .AddMethod(__Method_Delegate, serviceImpl.Delegate)
           .AddMethod(__Method_Vote, serviceImpl.Vote)
           .AddMethod(__Method_GetWinningProposal, serviceImpl.GetWinningProposal)
-          .AddMethod(__Method_GetChainPerson, serviceImpl.GetChainPerson).Build();
+          .AddMethod(__Method_GetChainPerson, serviceImpl.GetChainPerson)
+          .AddMethod(__Method_GetProposals, serviceImpl.GetProposals).Build();
     }
 
   }
