@@ -1,16 +1,16 @@
 syntax = "proto3";
 
-package vote;
+package ballot;
 
 import "aelf_options.proto";
 import "common.proto";
 import "google/protobuf/empty.proto";
 import "google/protobuf/wrappers.proto";
 
-option csharp_namespace = "Contract";
+option csharp_namespace = "Ballot";
 
-service VoteContract {
-    option (aelf.csharp_state) = "Contract.VoteState";
+service Ballot {
+    option (aelf.csharp_state) = "BallotState";
     // Actions
     rpc Initialize (InitializeInput) returns (google.protobuf.Empty) {
     }

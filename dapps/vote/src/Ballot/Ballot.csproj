@@ -2,21 +2,22 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
+        <RootNamespace>Contract</RootNamespace>
     </PropertyGroup>
     <ItemGroup>
         <Content Include="..\protobuf\aelf_options.proto">
             <Link>Protobuf/Proto/aelf_options.proto</Link>
         </Content>
-        <Content Include="..\protobuf\vote_contract.proto">
-            <Link>Protobuf/Proto/vote_contract.proto</Link>
+        <Content Include="..\protobuf\ballot.proto">
+            <Link>Protobuf/Proto/ballot.proto</Link>
         </Content>
     </ItemGroup>
     <ItemGroup>
       <PackageReference Include="AElf.Sdk.CSharp" Version="0.7.0-alpha.1-17995" />
     </ItemGroup>
     <Target Name="Gen_proto" BeforeTargets="BeforeBuild">
-        <Exec Condition="!$([MSBuild]::IsOsPlatform(Windows))" Command="../scripts/generate_contract_code.sh vote_contract.proto" />
-        <Exec Condition="$([MSBuild]::IsOsPlatform(Windows))" Command="..\scripts\generate_contract_code.bat vote_contract.proto" />
+        <Exec Condition="!$([MSBuild]::IsOsPlatform(Windows))" Command="../scripts/generate_contract_code.sh ballot.proto" />
+        <Exec Condition="$([MSBuild]::IsOsPlatform(Windows))" Command="..\scripts\generate_contract_code.bat ballot.proto" />
     </Target>
     <Target Name="UpdateGeneratedFiles" DependsOnTargets="Gen_proto" BeforeTargets="BeforeBuild">
         <ItemGroup>

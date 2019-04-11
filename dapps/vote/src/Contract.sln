@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contract", "Contract\Contract.csproj", "{814B1675-387D-4CAB-9915-5E783428A964}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ballot", "Ballot\Ballot.csproj", "{814B1675-387D-4CAB-9915-5E783428A964}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

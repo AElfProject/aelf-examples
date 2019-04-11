@@ -1,9 +1,9 @@
 using AElf.Common;
 using AElf.Sdk.CSharp.State;
 
-namespace Contract
+namespace Ballot
 {
-    public class VoteState : ContractState
+    public class BallotState : ContractState
     {
         public MappedState<Address, Voter> Voters { get; set; }
         public MappedState<uint, Proposal> Proposals { get; set; }

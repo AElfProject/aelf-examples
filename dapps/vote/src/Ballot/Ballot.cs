@@ -1,11 +1,12 @@
 ﻿using System;
 using AElf.Common;
 using AElf.Sdk.CSharp;
+using Ballot;
 using Google.Protobuf.WellKnownTypes;
 
-namespace Contract
+namespace Ballot
 {
-    public class VoteContract : VoteContractContainer.VoteContractBase
+    public class Ballot : BallotContainer.BallotBase
     {
         public override Empty Initialize(InitializeInput input)
         {
