@@ -29,26 +29,27 @@ namespace Ballot {
             "Z2xlL3Byb3RvYnVmL3dyYXBwZXJzLnByb3RvIikKD0luaXRpYWxpemVJbnB1",
             "dBIWCg5wcm9wb3NhbF9uYW1lcxgBIAMoCSJQCgVWb3RlchIOCgZ3ZWlnaHQY",
             "ASABKA0SDQoFdm90ZWQYAiABKAgSGgoIZGVsZWdhdGUYAyABKAsyCC5BZGRy",
-            "ZXNzEgwKBHZvdGUYBCABKA0iLAoIUHJvcG9zYWwSDAoEbmFtZRgBIAEoCRIS",
-            "Cgp2b3RlX2NvdW50GAIgASgNIjQKDVByb3Bvc2Fsc0RhdGESIwoJcHJvcG9z",
-            "YWxzGAEgAygLMhAuYmFsbG90LlByb3Bvc2FsMsoDCgZCYWxsb3QSPwoKSW5p",
-            "dGlhbGl6ZRIXLmJhbGxvdC5Jbml0aWFsaXplSW5wdXQaFi5nb29nbGUucHJv",
-            "dG9idWYuRW1wdHkiABI1Cg9HaXZlUmlnaHRUb1ZvdGUSCC5BZGRyZXNzGhYu",
-            "Z29vZ2xlLnByb3RvYnVmLkVtcHR5IgASLgoIRGVsZWdhdGUSCC5BZGRyZXNz",
-            "GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IgASPgoEVm90ZRIcLmdvb2dsZS5w",
-            "cm90b2J1Zi5VSW50MzJWYWx1ZRoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIA",
-            "EkUKEkdldFdpbm5pbmdQcm9wb3NhbBIWLmdvb2dsZS5wcm90b2J1Zi5FbXB0",
-            "eRoQLmJhbGxvdC5Qcm9wb3NhbCIFiIn3AQESOQoOR2V0Q2hhaW5QZXJzb24S",
-            "Fi5nb29nbGUucHJvdG9idWYuRW1wdHkaCC5BZGRyZXNzIgWIifcBARJECgxH",
-            "ZXRQcm9wb3NhbHMSFi5nb29nbGUucHJvdG9idWYuRW1wdHkaFS5iYWxsb3Qu",
-            "UHJvcG9zYWxzRGF0YSIFiIn3AQEaELLM9gELQmFsbG90U3RhdGVCCaoCBkJh",
-            "bGxvdGIGcHJvdG8z"));
+            "ZXNzEgwKBHZvdGUYBCABKA0iOAoIUHJvcG9zYWwSCgoCaWQYASABKA0SDAoE",
+            "bmFtZRgCIAEoCRISCgp2b3RlX2NvdW50GAMgASgNIjQKDVByb3Bvc2Fsc0Rh",
+            "dGESIwoJcHJvcG9zYWxzGAEgAygLMhAuYmFsbG90LlByb3Bvc2FsMvYDCgZC",
+            "YWxsb3QSPwoKSW5pdGlhbGl6ZRIXLmJhbGxvdC5Jbml0aWFsaXplSW5wdXQa",
+            "Fi5nb29nbGUucHJvdG9idWYuRW1wdHkiABI1Cg9HaXZlUmlnaHRUb1ZvdGUS",
+            "CC5BZGRyZXNzGhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IgASLgoIRGVsZWdh",
+            "dGUSCC5BZGRyZXNzGhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IgASPgoEVm90",
+            "ZRIcLmdvb2dsZS5wcm90b2J1Zi5VSW50MzJWYWx1ZRoWLmdvb2dsZS5wcm90",
+            "b2J1Zi5FbXB0eSIAEkUKEkdldFdpbm5pbmdQcm9wb3NhbBIWLmdvb2dsZS5w",
+            "cm90b2J1Zi5FbXB0eRoQLmJhbGxvdC5Qcm9wb3NhbCIFiIn3AQESOQoOR2V0",
+            "Q2hhaW5QZXJzb24SFi5nb29nbGUucHJvdG9idWYuRW1wdHkaCC5BZGRyZXNz",
+            "IgWIifcBARJECgxHZXRQcm9wb3NhbHMSFi5nb29nbGUucHJvdG9idWYuRW1w",
+            "dHkaFS5iYWxsb3QuUHJvcG9zYWxzRGF0YSIFiIn3AQESKgoIR2V0Vm90ZXIS",
+            "CC5BZGRyZXNzGg0uYmFsbG90LlZvdGVyIgWIifcBARoQssz2AQtCYWxsb3RT",
+            "dGF0ZUIJqgIGQmFsbG90YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Aelf.AelfOptionsReflection.Descriptor, global::AElf.Common.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ballot.InitializeInput), global::Ballot.InitializeInput.Parser, new[]{ "ProposalNames" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ballot.Voter), global::Ballot.Voter.Parser, new[]{ "Weight", "Voted", "Delegate", "Vote" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ballot.Proposal), global::Ballot.Proposal.Parser, new[]{ "Name", "VoteCount" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ballot.Proposal), global::Ballot.Proposal.Parser, new[]{ "Id", "Name", "VoteCount" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ballot.ProposalsData), global::Ballot.ProposalsData.Parser, new[]{ "Proposals" }, null, null, null)
           }));
     }
@@ -421,6 +422,7 @@ namespace Ballot {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Proposal(Proposal other) : this() {
+      id_ = other.id_;
       name_ = other.name_;
       voteCount_ = other.voteCount_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -431,8 +433,19 @@ namespace Ballot {
       return new Proposal(this);
     }
 
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 1;
+    private uint id_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public uint Id {
+      get { return id_; }
+      set {
+        id_ = value;
+      }
+    }
+
     /// <summary>Field number for the "name" field.</summary>
-    public const int NameFieldNumber = 1;
+    public const int NameFieldNumber = 2;
     private string name_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -443,7 +456,7 @@ namespace Ballot {
     }
 
     /// <summary>Field number for the "vote_count" field.</summary>
-    public const int VoteCountFieldNumber = 2;
+    public const int VoteCountFieldNumber = 3;
     private uint voteCount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public uint VoteCount {
@@ -466,6 +479,7 @@ namespace Ballot {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (Id != other.Id) return false;
       if (Name != other.Name) return false;
       if (VoteCount != other.VoteCount) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -474,6 +488,7 @@ namespace Ballot {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
+      if (Id != 0) hash ^= Id.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (VoteCount != 0) hash ^= VoteCount.GetHashCode();
       if (_unknownFields != null) {
@@ -489,12 +504,16 @@ namespace Ballot {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+      if (Id != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(Id);
+      }
       if (Name.Length != 0) {
-        output.WriteRawTag(10);
+        output.WriteRawTag(18);
         output.WriteString(Name);
       }
       if (VoteCount != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(24);
         output.WriteUInt32(VoteCount);
       }
       if (_unknownFields != null) {
@@ -505,6 +524,9 @@ namespace Ballot {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
+      if (Id != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Id);
+      }
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
@@ -521,6 +543,9 @@ namespace Ballot {
     public void MergeFrom(Proposal other) {
       if (other == null) {
         return;
+      }
+      if (other.Id != 0) {
+        Id = other.Id;
       }
       if (other.Name.Length != 0) {
         Name = other.Name;
@@ -539,11 +564,15 @@ namespace Ballot {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
+          case 8: {
+            Id = input.ReadUInt32();
+            break;
+          }
+          case 18: {
             Name = input.ReadString();
             break;
           }
-          case 16: {
+          case 24: {
             VoteCount = input.ReadUInt32();
             break;
           }

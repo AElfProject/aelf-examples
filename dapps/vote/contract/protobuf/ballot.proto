@@ -32,6 +32,9 @@ service Ballot {
     rpc GetProposals (google.protobuf.Empty) returns (ProposalsData) {
         option (aelf.is_view) = true;
     }
+    rpc GetVoter (Address) returns (Voter) {
+        option (aelf.is_view) = true;
+    }
 }
 
 message InitializeInput {
@@ -46,8 +49,9 @@ message Voter {
 }
 
 message Proposal {
-    string name = 1;
-    uint32 vote_count = 2;
+    uint32 id = 1;
+    string name = 2;
+    uint32 vote_count = 3;
 }
 
 message ProposalsData {

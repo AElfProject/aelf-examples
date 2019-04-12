@@ -21,6 +21,7 @@ namespace Ballot
             {
                 State.Proposals[count] = new Proposal()
                 {
+                    Id = count,
                     Name = name,
                     VoteCount = 0
                 };
@@ -74,16 +75,16 @@ namespace Ballot
 
         public override Empty Vote(UInt32Value input)
         {
-            var proposal = input;
+            var proposalId = input.Value;
             var sender = State.Voters[Context.Sender] ?? new Voter();
             Assert(sender.Weight != 0, "Has no right to vote");
             Assert(!sender.Voted, "Already voted.");
             sender.Voted = true;
-            sender.Vote = proposal.Value;
+            sender.Vote = proposalId;
             State.Voters[Context.Sender] = sender;
-            var proposalRecord = State.Proposals[proposal.Value];
+            var proposalRecord = State.Proposals[proposalId];
             proposalRecord.VoteCount = proposalRecord.VoteCount.Add(sender.Weight);
-            State.Proposals[proposal.Value] = proposalRecord;
+            State.Proposals[proposalId] = proposalRecord;
             return new Empty();
         }
 
@@ -118,6 +119,12 @@ namespace Ballot
             }
 
             return output;
+        }
+
+        public override Voter GetVoter(Address input)
+        {
+            Assert(input!=new Address(), "Invalid voter.");
+            return State.Voters[input];
         }
     }
 }

@@ -22,6 +22,7 @@ namespace Ballot {
     static readonly aelf::Marshaller<global::Google.Protobuf.WellKnownTypes.UInt32Value> __Marshaller_google_protobuf_UInt32Value = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.UInt32Value.Parser.ParseFrom);
     static readonly aelf::Marshaller<global::Ballot.Proposal> __Marshaller_ballot_Proposal = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Ballot.Proposal.Parser.ParseFrom);
     static readonly aelf::Marshaller<global::Ballot.ProposalsData> __Marshaller_ballot_ProposalsData = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Ballot.ProposalsData.Parser.ParseFrom);
+    static readonly aelf::Marshaller<global::Ballot.Voter> __Marshaller_ballot_Voter = aelf::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Ballot.Voter.Parser.ParseFrom);
     #endregion
 
     #region Methods
@@ -73,6 +74,13 @@ namespace Ballot {
         "GetProposals",
         __Marshaller_google_protobuf_Empty,
         __Marshaller_ballot_ProposalsData);
+
+    static readonly aelf::Method<global::AElf.Common.Address, global::Ballot.Voter> __Method_GetVoter = new aelf::Method<global::AElf.Common.Address, global::Ballot.Voter>(
+        aelf::MethodType.View,
+        __ServiceName,
+        "GetVoter",
+        __Marshaller_Address,
+        __Marshaller_ballot_Voter);
 
     #endregion
 
@@ -132,6 +140,11 @@ namespace Ballot {
         throw new global::System.NotImplementedException();
       }
 
+      public virtual global::Ballot.Voter GetVoter(global::AElf.Common.Address input)
+      {
+        throw new global::System.NotImplementedException();
+      }
+
     }
 
     public static aelf::ServerServiceDefinition BindService(BallotBase serviceImpl)
@@ -144,7 +157,8 @@ namespace Ballot {
           .AddMethod(__Method_Vote, serviceImpl.Vote)
           .AddMethod(__Method_GetWinningProposal, serviceImpl.GetWinningProposal)
           .AddMethod(__Method_GetChainPerson, serviceImpl.GetChainPerson)
-          .AddMethod(__Method_GetProposals, serviceImpl.GetProposals).Build();
+          .AddMethod(__Method_GetProposals, serviceImpl.GetProposals)
+          .AddMethod(__Method_GetVoter, serviceImpl.GetVoter).Build();
     }
 
   }
