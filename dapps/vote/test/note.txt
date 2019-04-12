@@ -1,0 +1,25 @@
+# Chairman:
+3muQCXavYHCzsG9cZft1yDusWvz3AFn3PEjBzoy6Zqp63u1
+
+# Voters:
+aaQg2bR8LbZAEriAHNJJn3gpo8HD9vbw1aG5j8ESSFjXCQ
+bbmHFPicnDojGsVSSX2rj2iMHH4fNDyKBhxMc3qXGZ9foL
+ccLk9JgzHAQnwAhKoDGuEWifkGMR5oUrrShnLVWRCbCPw4
+
+
+# scripts
+c = aelf.chain.contractAt('4QjhKLWacRXrQYpT7rzf74k5XZFCx8yF3X7FXbzKD4wwEo6', _account)
+c.Initialize({proposalNames: ['Alice', 'Bob', 'Charlie']})
+c.GetChainPerson.call()
+c.GiveRightToVote('aaQg2bR8LbZAEriAHNJJn3gpo8HD9vbw1aG5j8ESSFjXCQ')
+c.GiveRightToVote('bbmHFPicnDojGsVSSX2rj2iMHH4fNDyKBhxMc3qXGZ9foL')
+c.GiveRightToVote('ccLk9JgzHAQnwAhKoDGuEWifkGMR5oUrrShnLVWRCbCPw4')
+
+c.GetWinningProposal.call()
+
+aelf-cli send 4QjhKLWacRXrQYpT7rzf74k5XZFCx8yF3X7FXbzKD4wwEo6 Vote '{value: 1}' \
+-a aaQg2bR8LbZAEriAHNJJn3gpo8HD9vbw1aG5j8ESSFjXCQ -p 123
+aelf-cli send 4QjhKLWacRXrQYpT7rzf74k5XZFCx8yF3X7FXbzKD4wwEo6 Vote '{value: 2}' \
+-a bbmHFPicnDojGsVSSX2rj2iMHH4fNDyKBhxMc3qXGZ9foL -p 123
+aelf-cli send 4QjhKLWacRXrQYpT7rzf74k5XZFCx8yF3X7FXbzKD4wwEo6 Vote '{value: 2}' \
+-a ccLk9JgzHAQnwAhKoDGuEWifkGMR5oUrrShnLVWRCbCPw4 -p 123
