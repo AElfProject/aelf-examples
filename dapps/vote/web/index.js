@@ -1,5 +1,5 @@
 angular.module('dapp', [])
-    .controller('MyCtrl', function ($scope, $timeout, $window, $document) {
+    .controller('MyCtrl', function ($scope, $timeout, $window) {
         function getAelf(){
             var aelf = null;
             if ($window.NightElf) {
