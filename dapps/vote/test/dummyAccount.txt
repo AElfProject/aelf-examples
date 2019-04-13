@@ -1,0 +1,4 @@
+Mnemonic    : someone spell honey primary blur avocado seat model lawn hidden rain fuel
+Private Key : 27e8be33c76669d5962a2b92b4651790f57ce9adfbfc7ec90bd98e990cc12b05
+Public Key : 0484471d2d5e8ce42748b20d33563089eb27f94c6446685315d192618a192616acd5c2c364ce92fd4a58cf16292999276b7990663ad585f170fd81683367deaf1b
+Address     : 6HXRmD4cMTwS9TVVbW5DAr66RGEv1yQnCezkaB3gk4SrX5Y

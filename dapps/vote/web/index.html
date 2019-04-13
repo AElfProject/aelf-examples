@@ -13,6 +13,7 @@
 
 <body class="container" ng-cloak ng-controller="MyCtrl">
     <h2>Welcome</h2>
+    <button ng-show="!voter.address" ng-click="login()">login</button>
     <div ng-show="voter.address">You've logged in as: {{voter.address}}</div>
     <div ng-show="voter.hasOwnProperty('voted') && !voter.voted">You have right to vote with weight of {{voter.weight | number}}.</div>
     <div ng-show="voter.hasOwnProperty('voted') && voter.voted">You have already voted.</div>
@@ -31,15 +32,15 @@
                 <td>{{p.name}}</td>
                 <td>{{p.voteCount | number}}</td>
                 <td>
-                    <button ng-if="!voter.voted" ng-click="voteFor(p.id)">Vote</button>
+                    <button ng-if="userAccount.address && !voter.voted" ng-click="voteFor(p.id)">Vote</button>
                     <span ng-show="voter.voted && p.id == voter.vote"> You have voted for this candidate.</span>
                 </td>
             </tr>
         </tbody>
     </table>
-    <!-- <script type="text/javascript" src="settings1.js"></script> -->
-    <script type="text/javascript" src="ballot.js"></script>
-    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="settings.js"></script>
+    <script type="text/javascript" src="aelf.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
 </body>
 
 </html>
