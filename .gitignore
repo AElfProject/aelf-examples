@@ -3,3 +3,6 @@
 **/bin/*
 
 **/*.DotSettings.*
+*.c.cs
+*.g.cs
+

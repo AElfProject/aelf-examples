@@ -1,7 +1,5 @@
-﻿using System;
-using AElf.Common;
+﻿using AElf.Common;
 using AElf.Sdk.CSharp;
-using Ballot;
 using Google.Protobuf.WellKnownTypes;
 
 namespace Ballot

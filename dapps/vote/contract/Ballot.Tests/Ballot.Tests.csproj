@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp2.2</TargetFramework>
+
+        <IsPackable>false</IsPackable>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="AElf.Contracts.TestKit" Version="0.7.0-alpha.1-17999" />
+        <PackageReference Include="Shouldly" Version="4.0.0-beta0001" />
+        <PackageReference Include="xunit" Version="2.4.0" />
+        <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
+    </ItemGroup>
+    
+    <ItemGroup>
+        <Content Include="..\protobuf\aelf_options.proto">
+            <Link>Protobuf/Proto/aelf_options.proto</Link>
+        </Content>
+        <Content Include="..\protobuf\ballot.proto">
+            <Link>Protobuf/Proto/ballot.proto</Link>
+        </Content>
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\Ballot\Ballot.csproj" />
+    </ItemGroup>
+    <Target Name="Gen_proto" BeforeTargets="BeforeBuild">
+        <Exec Condition="!$([MSBuild]::IsOsPlatform(Windows))" Command="../scripts/generate_contract_stub.sh ballot.proto" />
+        <Exec Condition="$([MSBuild]::IsOsPlatform(Windows))" Command="..\scripts\generate_contract_stub.bat ballot.proto" />
+    </Target>
+    <Target Name="UpdateGeneratedFiles" DependsOnTargets="Gen_proto" BeforeTargets="BeforeBuild">
+        <ItemGroup>
+            <Compile Include="./Protobuf/Generated/*.cs" />
+        </ItemGroup>
+    </Target>
+
+</Project>
