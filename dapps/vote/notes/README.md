@@ -19,3 +19,6 @@ This is familiar to most mainstream developers and it supports multiple language
 
 ## One CLI command for deploying the contract code
 ![](./images/cli_for_deployment_and_interaction.png)
+
+## dApp uses aelfjs and the wallet extension to interact with the blockchain
+![](./images/dapp.gif)
