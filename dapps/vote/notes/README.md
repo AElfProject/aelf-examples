@@ -1,6 +1,6 @@
 
 ## Smart contract defined in protobuf format
-This is familiar to most mainstream developers.
+This is familiar to most mainstream developers and it supports multiple languages.
 ![](./images/proto.png)
 
 ## Smart contract skeleton is generated from protobuf definition using plugin provided by aelf
