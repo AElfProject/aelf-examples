@@ -36,7 +36,7 @@ namespace Ballot
             Assert(Context.Sender == State.ChairPerson.Value, "Only chairperson can give right to vote.");
             var voter = State.Voters[input] ?? new Voter();
             Assert(!voter.Voted, "The voter already voted.");
-            Assert(voter.Weight==0);
+            Assert(voter.Weight == 0);
             voter.Weight = 1;
             State.Voters[input] = voter;
             return new Empty();
@@ -58,6 +58,7 @@ namespace Ballot
 
             sender.Voted = true;
             sender.Delegate = to;
+            State.Voters[Context.Sender] = sender;
             var delegateVoter = State.Voters[to];
             if (delegateVoter.Voted)
             {
@@ -69,6 +70,7 @@ namespace Ballot
                 delegateVoter.Weight = delegateVoter.Weight.Add(sender.Weight);
                 State.Voters[to] = delegateVoter;
             }
+
             return new Empty();
         }
 
@@ -87,19 +89,20 @@ namespace Ballot
             return new Empty();
         }
 
-        
+
         public override Proposal GetWinningProposal(Empty input)
         {
             var winningProposal = new Proposal();
             var proposalCount = State.ProposalCount.Value;
             for (uint p = 0; p < proposalCount; p++)
             {
-                var proposal = State.Proposals[p]; 
+                var proposal = State.Proposals[p];
                 if (proposal.VoteCount > winningProposal.VoteCount)
                 {
                     winningProposal = proposal;
                 }
             }
+
             return winningProposal;
         }
 
