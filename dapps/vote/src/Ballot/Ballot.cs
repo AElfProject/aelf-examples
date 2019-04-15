@@ -78,7 +78,7 @@ namespace Ballot
         {
             var proposal = input;
             var sender = State.Voters[Context.Sender] ?? new Voter();
-            Assert(sender.Weight != 0, "Has no right to vote");
+            Assert(sender.Weight != 0, "Has no right to vote.");
             Assert(!sender.Voted, "Already voted.");
             sender.Voted = true;
             sender.Vote = proposal.Value;
