@@ -21,11 +21,9 @@ service Ballot {
     rpc Vote (google.protobuf.UInt32Value) returns (google.protobuf.Empty) {
     }
     // Views
-    // Solidity - Original
     rpc GetWinningProposal (google.protobuf.Empty) returns (Proposal) {
         option (aelf.is_view) = true;
     }
-    // Added by us
     rpc GetChainPerson (google.protobuf.Empty) returns (Address) {
         option (aelf.is_view) = true;
     }
