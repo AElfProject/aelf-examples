@@ -3,3 +3,9 @@
 **/bin/*
 
 **/*.DotSettings.*
+
+*.c.cs
+*.g.cs
+*.mp4
+
+
